@@ -3,8 +3,11 @@ import './spinner.css'
 
 function App(): JSX.Element {
   const click = async (): Promise<undefined> => {
-    const info = await api.getNodeInfo('http://localhost:14265')
+    const startTime = performance.now()
+    const info = await api.createAccount()
     console.log(info)
+    const endTime = performance.now()
+    console.log(`createAccount ${endTime - startTime} ms`)
   }
   return (
     <div className="container">

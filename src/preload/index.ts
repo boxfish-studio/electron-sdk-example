@@ -8,18 +8,45 @@
 
 const { contextBridge } = require('electron')
 const IotaSdk = require('@iota/sdk')
+const walletOptions = {
+  storagePath: './example-walletdb',
+  clientOptions: {
+    nodes: ['http://localhost:14265']
+  },
+  coinType: IotaSdk.CoinType.Shimmer,
+  secretManager: {
+    stronghold: {
+      snapshotPath: './example.stronghold',
+      password: '24?drowssap'
+    }
+  }
+}
+const wallet = new IotaSdk.Wallet(walletOptions)
 
 contextBridge.exposeInMainWorld('__WALLET__API__', {
-  async getNodeInfo(url) {
-    const client = new IotaSdk.Client({
-      nodes: [url]
+  async createAccount() {
+    // Create a new account
+    const account = await wallet.createAccount({
+      alias: makeid(10)
     })
 
-    const nodeInfo = await client.getNodeInfo(url)
-
+    const accounts = await wallet.getAccounts()
     return {
-      url: url,
-      nodeInfo
+      newAccount: account,
+      allAccounts: accounts
     }
   }
 })
+
+// makes random Id.
+function makeid(length): string {
+  let result = ''
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+  const charactersLength = characters.length
+  let counter = 0
+  while (counter < length) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength))
+    counter += 1
+  }
+  return result
+}
