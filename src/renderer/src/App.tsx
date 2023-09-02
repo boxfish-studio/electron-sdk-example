@@ -8,8 +8,9 @@ function App(): JSX.Element {
   }
   return (
     <div className="container">
-      <h1> hello </h1>
-      <button onClick={click}> btn </button>
+      <h3> Node info will be logged to the console </h3>
+      <button onClick={click}> node info </button>
+      <h3> Spinner to check if the app stays responsive </h3>
       <div className="spinner" />
     </div>
   )
