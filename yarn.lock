@@ -483,16 +483,19 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@iota/sdk@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@iota/sdk/-/sdk-1.0.7.tgz#c8b73fa78b5aa5aa48d91d1d0455a9bc61dc2bb2"
-  integrity sha512-Mr4HFdN0/Wl4aCNBpCYCSgr8/tUWMc2iFg22JV3YD+EyLWc6J6ojmtfqLb/74iQ38wivschvfxKejB91HVBWAA==
+"@iota/types@^1.0.0-beta.15":
+  version "1.0.0-beta.15"
+  resolved "https://registry.yarnpkg.com/@iota/types/-/types-1.0.0-beta.15.tgz#1a1f5722ef176a45d03e92f4cb5bd9a4ea74ec27"
+  integrity sha512-67DrzDO5bl2c7RIMpOdtjdOa27Bv1EmX/BHPTQD8c3RtPPAzJpSIpuI8JsIDl3U6Qe4zdLX3kRv9zGBXcr0fZA==
+
+"@iota/wallet@2.0.3-rc.47":
+  version "2.0.3-rc.47"
+  resolved "https://registry.yarnpkg.com/@iota/wallet/-/wallet-2.0.3-rc.47.tgz#ae7fc474e862d86f947e858545e0470b731adc5a"
+  integrity sha512-kLG0UcmO8NH3bcoF3NG1qgx76+oUGVb2OMu3rVy8bdENxhjHW9cFn6yds0syWfsZxfXK+xccE5ExJWtml215HQ==
   dependencies:
-    "@types/node" "^18.15.12"
+    "@iota/types" "^1.0.0-beta.15"
     cargo-cp-artifact "^0.1.6"
-    class-transformer "^0.5.1"
     prebuild-install "^7.1.1"
-    reflect-metadata "^0.1.13"
     typescript "^4.9.4"
 
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
@@ -645,7 +648,7 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.5.8.tgz#fb171fd22d37ca6e2ea97fde88e6a13ee14bc327"
   integrity sha512-eajsR9aeljqNhK028VG0Wuw+OaY5LLxYmxeoXynIoE6jannr9/Ucd1LL0hSSoafk5LTYG+FfqsyGt81Q6Zkybw==
 
-"@types/node@^18.11.18", "@types/node@^18.15.12", "@types/node@^18.17.5":
+"@types/node@^18.11.18", "@types/node@^18.17.5":
   version "18.17.13"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.17.13.tgz#d99cb351ff2e51a192fe8903b658c4f85fbcb58c"
   integrity sha512-SlLPDDe6YQl1JnQQy4hgsuJeo5q5c1TBU4be4jeBLXsqpjoDbfb0HesSfhMwnaxfSJ4txtfzJzW5/x/43fkkfQ==
@@ -1234,11 +1237,6 @@ ci-info@^3.2.0:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-3.8.0.tgz#81408265a5380c929f0bc665d62256628ce9ef91"
   integrity sha512-eXTggHWSooYhq49F2opQhuHWgzucfF2YgODK4e1566GQs5BIfP30B0oenwBJHfWxAs2fyPB1s7Mg949zLf61Yw==
-
-class-transformer@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/class-transformer/-/class-transformer-0.5.1.tgz#24147d5dffd2a6cea930a3250a677addf96ab336"
-  integrity sha512-SQa1Ws6hUbfC98vKGxZH3KFY0Y1lm5Zm0SY8XX9zbK7FJCyVEac3ATW0RIpwzW+oOfmHE5PMPufDG9hCfoEOMw==
 
 cli-truncate@^2.1.0:
   version "2.1.0"
@@ -3238,11 +3236,6 @@ readable-stream@^3.1.1, readable-stream@^3.4.0:
     inherits "^2.0.3"
     string_decoder "^1.1.1"
     util-deprecate "^1.0.1"
-
-reflect-metadata@^0.1.13:
-  version "0.1.13"
-  resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.13.tgz#67ae3ca57c972a2aa1642b10fe363fe32d49dc08"
-  integrity sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==
 
 reflect.getprototypeof@^1.0.3:
   version "1.0.4"
